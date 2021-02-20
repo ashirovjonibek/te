@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tahrirlash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+          integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+
+</head>
+<body>
+<div class="container">
+    <form action="/addOrEdit" method="post">
+        <input type="hidden" name="id" value="" th:value="${student.id}"/>
+        <label>
+            Name:
+            <input type="text" name="name" value="" placeholder="name" th:value="${student.name}"/>
+        </label>
+        <label>
+            Age:
+            <input type="text" name="age" value="" placeholder="age" th:value="${student.age}"/>
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email" value="" placeholder="email" th:value="${student.email}"/>
+        </label>
+        <button type="submit" class="btn btn-success">Saqlash</button>
+        <a href="/" class="btn btn-success">Bekor qilish</a>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+        integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+        crossorigin="anonymous"></script>
+</body>
+</html>

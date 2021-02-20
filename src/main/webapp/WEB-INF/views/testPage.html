@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student:${students}">
+        <td th:text="@{student.id}"></td>
+        <td th:text="@{student.name}"></td>
+        <td th:text="@{student.age}"></td>
+        <td th:text="@{student.email}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
